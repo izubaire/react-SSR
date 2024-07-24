@@ -14,17 +14,12 @@ export default function Products() {
   }
 
   useEffect(() => {
-    const defineMeta = async () => {
-      await getDataMeta({
-        path: '/products'
-      }).then(({ result, status }) => {
-        if (!status) return;
-
-        setIsMeta(result)
-      })
-    }
-
-    defineMeta()
+    setIsMeta({
+      title: 'Testing Official',
+      description: 'Official NMW Clinic sejak 2007 Klinik Kecantikan, Klinik Aesthetic',
+      image: 'https://dummyimage.com/300.png/09f/fff',
+      url: 'https://nmwclinic.co.id'
+    })
   }, [isLocation])
 
   return (
